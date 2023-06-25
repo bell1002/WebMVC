@@ -1,0 +1,23 @@
+﻿<!-- New Arrivals -->
+<div class="new_arrivals">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="section_title new_arrivals_title">
+                    <h2>New Arrivals</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+           @Html.Action("RenderCategory","Product")
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+                    @Html.Action("RenderProduct","Product")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

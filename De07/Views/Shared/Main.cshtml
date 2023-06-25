@@ -1,0 +1,25 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- Section Heading -->
+            <div class="section-heading text-center">
+                <h2>OUR PORTFOLIO</h2>
+                <p>HoThiKieuLinh-6151071066</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+        @Html.Action("RenderCategory", "Home")
+    </div>
+
+    <div class="row alazea-portfolio" id="content">
+        
+            @Html.Action("RenderPlant")
+
+        </div>
+    </div>

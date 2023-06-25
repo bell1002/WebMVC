@@ -1,0 +1,23 @@
+﻿ @model IEnumerable<De03.Models.Entities.PhanLoai>
+
+                        @foreach (var item in Model)
+                        {
+                            <a href="" class="item" id="@item.MaPhanLoai">
+                                @item.PhanLoaiChinh
+                            </a>
+                        }
+                        
+
+<script>
+    $(".item").click(function () {
+        var ma = $(this).attr("id");
+
+        $.ajax({
+            url: "RenderProductId",
+            data: { ma: ma },
+            success: function (res) {
+                $("div#content").html(res);
+            }
+        })
+    })
+</script>

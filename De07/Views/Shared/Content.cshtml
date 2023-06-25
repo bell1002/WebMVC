@@ -1,0 +1,25 @@
+﻿@model IEnumerable<De07.Models.Entities.SanPham>
+
+@foreach (var item in Model)
+{
+
+    <!-- Single Portfolio Area -->
+    <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design">
+        <!-- Portfolio Thumbnail -->
+
+     <div class="portfolio-thumbnail bg-img" style="background-image: url('@Url.Content("~/Content/img/bg-img/"+item.AnhDaiDien)');">
+
+        </div>
+        <!-- Portfolio Hover Text -->
+        <div class="portfolio-hover-overlay">
+            <a href="~/Home/ChiTietSanPham?Id=@item.MaSanPham" class=" d-flex align-items-center justify-content-center" title="Portfolio">
+                <div class="port-hover-text">
+                    <h3>@item.TenSanPham</h3>
+                    <h5>@item.DonGiaBanNhoNhat</h5>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+}
+ 
